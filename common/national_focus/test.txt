@@ -1,0 +1,134 @@
+#!gfx:interface\test.gfx
+
+focus_tree = {
+    id = fengxi_focus
+    
+    country = {
+        factor = 0
+        modifier = {
+            add = 20
+            tag = FEN
+        }
+    }
+
+    default = no
+    
+    continuous_focus_position = { x = 50 y = 1000 }
+
+    focus = {
+        id = FEN_get_china
+        icon = GFX_tech_idea_bg
+        x = 2
+        y = 0
+
+        cost = 1
+
+        completion_reward = {
+            FEN = {
+                transfer_state = 615
+            }
+            meta_effect = {
+                text = {
+                    add_equipment_to_stockpile = {
+                        type = [EQ_TYPE]_[EQ_LEVEL]
+                        amount = eq_amount
+                    }
+                }
+                EQ_LEVEL = "[?eq_level|.0]" # Gets the "eq_level" variable and saves it as "EQ_LEVEL" for the meta-effect to use
+                EQ_TYPE = "[This.GetEquipmentName]" # Gets the equipment type from scripted localisation, included below, based on the "eq_type" variable, and saves it as "EQ_TYPE" for the meta-effect to use
+            }
+        }
+    }
+
+    focus = {
+        id = FEN_get_chsadasd
+        icon = GFX_focus_por_recover_latin_america
+        prerequisite = { focus = FEN_get_china }
+        relative_position_id = FEN_get_china
+        x = -2
+        y = 1
+
+        cost = 1
+
+        completion_reward = {
+            FEN = {
+                transfer_state = 615
+            }
+        }
+        
+        offset = {
+            x = -6
+            y = 0
+            trigger = {
+                tag = PRC
+            }
+        }
+    }
+}
+
+
+focus_tree = {
+    id = fengxi_focus_a
+    
+    country = {
+        factor = 0
+        modifier = {
+            add = 20
+            tag = FEN
+        }
+    }
+
+    default = no
+    
+    continuous_focus_position = { x = 50 y = 1000 }
+
+    focus = {
+        id = FEN_get_china
+        icon = GFX_tech_idea_bg
+        x = 4
+        y = 0
+
+        cost = 1
+
+        completion_reward = {
+            FEN = {
+                transfer_state = 615
+            }
+            meta_effect = {
+                text = {
+                    add_equipment_to_stockpile = {
+                        type = [EQ_TYPE]_[EQ_LEVEL]
+                        amount = eq_amount
+                    }
+                }
+                EQ_LEVEL = "[?eq_level|.0]" # Gets the "eq_level" variable and saves it as "EQ_LEVEL" for the meta-effect to use
+                EQ_TYPE = "[This.GetEquipmentName]" # Gets the equipment type from scripted localisation, included below, based on the "eq_type" variable, and saves it as "EQ_TYPE" for the meta-effect to use
+            }
+        }
+    }
+
+    focus = {
+        id = FEN_get_chsadasd
+        icon = GFX_focus_por_recover_latin_america
+        prerequisite = { focus = FEN_get_china }
+        relative_position_id = FEN_get_china
+        x = -2
+        y = 1
+
+        cost = 1
+
+        completion_reward = {
+            FEN = {
+                transfer_state = 615
+            }
+        }
+        
+        offset = {
+            x = 1
+            y = 0
+            trigger = {
+                tag = PRC
+            }
+        }
+    }
+}

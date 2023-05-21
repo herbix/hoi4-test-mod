@@ -1,0 +1,17 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_portrait_blabla"
+		texturefile = "gfx/leaders/Asia/Portrait_Asia_Generic_land_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_xueliang"
+		texturefile = "gfx/leaders/CHI/portrait_chi_zhang_xueliang.dds"
+	}
+
+	spriteType = {
+		name = "testtest"
+		texturefile = "gfx/test1.png"
+	}
+}
